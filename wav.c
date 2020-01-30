@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "wav.h"
 
+wav_file wf;
 wav_file* parse(char* contents) {
 
-	wav_file wf;
-	memcpy(&wf, contents, sizeof(wav_file));
+	memcpy(&wf, contents, sizeof(struct wav_file));
 	return &wf;
 }
